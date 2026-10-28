@@ -3,156 +3,252 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shattered Kings | Glory</title>
-  <meta name="description" content="Shattered Kings is a Christian music project rooted in Scripture. Listen to Glory and order the physical CD.">
+  <title>Shattered Kings | Poor</title>
+  <meta name="description" content="Shattered Kings is Christian Americana music proclaiming the glory of God in Jesus Christ. Hear the new single Poor, explore the album Glory, and connect with Shattered Kings.">
+  <meta name="theme-color" content="#080706">
   <style>
     :root {
-      --black: #050505;
-      --panel: #0d0d0c;
-      --silver: #e5e3dc;
-      --muted: #aaa79e;
-      --gold: #c8a24d;
-      --gold-light: #e4c272;
-      --line: rgba(255, 255, 255, 0.12);
-      --max: 1180px;
+      --ink: #080706;
+      --ink-soft: #11100e;
+      --panel: #171511;
+      --paper: #f1eee6;
+      --muted: #aaa69c;
+      --gold: #c4a15a;
+      --gold-bright: #e2c379;
+      --line: rgba(241, 238, 230, 0.14);
+      --max: 1160px;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--black); color: var(--silver); font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.65; }
+    body {
+      margin: 0;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
     img { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
-    a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
-    section { scroll-margin-top: 88px; }
+    a:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 4px; }
+    section { scroll-margin-top: 84px; }
     .container { width: min(var(--max), 90vw); margin: 0 auto; }
-    .kicker { margin: 0 0 14px; color: var(--gold-light); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
-    h1, h2, h3 { margin-top: 0; color: #f4f2ec; font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
-    h1 { margin-bottom: 22px; font-size: clamp(4.5rem, 11vw, 8.5rem); line-height: 0.86; letter-spacing: 0.04em; }
-    h2 { margin-bottom: 22px; font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.05; }
-    p { margin-top: 0; }
-    .lead { max-width: 640px; color: #c4c1b9; font-size: 1.13rem; }
-    header { position: absolute; z-index: 10; top: 0; width: 100%; border-bottom: 1px solid var(--line); }
-    .nav-wrap { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-    .brand { display: flex; align-items: center; gap: 14px; color: #fff; font-size: 0.92rem; font-weight: 700; letter-spacing: 0.08em; }
-    .brand img { width: 46px; height: 46px; object-fit: cover; border-radius: 50%; }
-    nav { display: flex; align-items: center; gap: 28px; color: #c6c4bd; font-size: 0.9rem; }
-    nav a { transition: color 0.2s ease; }
-    nav a:hover { color: var(--gold-light); }
-    .hero { min-height: 100svh; display: flex; align-items: center; padding: 150px 0 90px; background: radial-gradient(circle at 76% 44%, rgba(200, 162, 77, 0.16), transparent 28%), linear-gradient(135deg, #090908 0%, #030303 66%); overflow: hidden; }
-    .hero-grid { display: grid; grid-template-columns: 1.05fr 0.82fr; align-items: center; gap: clamp(50px, 8vw, 110px); }
-    .hero-copy { position: relative; z-index: 2; }
-    .hero h1 { color: var(--gold-light); text-shadow: 0 10px 55px rgba(200, 162, 77, 0.14); }
-    .hero .lead { margin-bottom: 32px; }
-    .hero-art { position: relative; }
-    .hero-art::before { content: ""; position: absolute; inset: 8% -8% -8% 8%; z-index: 0; border: 1px solid rgba(200, 162, 77, 0.35); }
-    .hero-art img { position: relative; z-index: 1; width: 100%; box-shadow: 0 35px 90px rgba(0, 0, 0, 0.65); }
-    .hero-note { margin-top: 28px; color: #87857e; font-size: 0.9rem; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 25px; border: 1px solid var(--gold); font-size: 0.9rem; font-weight: 700; transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease; }
-    .button:hover { transform: translateY(-2px); }
-    .button.primary { background: var(--gold); color: #080808; }
-    .button.primary:hover { background: var(--gold-light); }
-    .button.secondary { color: var(--silver); border-color: #5a574f; }
-    .button.secondary:hover { border-color: var(--gold); color: var(--gold-light); }
-    .section { padding: 120px 0; }
-    .album-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; align-items: start; gap: clamp(55px, 9vw, 120px); }
-    .album-intro { position: sticky; top: 110px; }
-    .album-intro p:last-child { color: var(--muted); }
-    .track-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-    .track-list li { display: grid; grid-template-columns: 52px 1fr auto; align-items: center; min-height: 76px; border-bottom: 1px solid var(--line); }
-    .track-number { color: var(--gold); font-size: 0.85rem; }
-    .track-title { color: #eeece6; font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; }
-    .track-detail { color: #817f78; font-size: 0.83rem; }
-    .mission { padding: 100px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--panel); text-align: center; }
-    blockquote { max-width: 980px; margin: 0 auto 28px; color: #f0eee8; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 4.4vw, 4rem); line-height: 1.2; }
-    .mission-copy { max-width: 720px; margin: 0 auto; color: var(--muted); font-size: 1.05rem; }
-    .order-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: clamp(55px, 8vw, 100px); }
-    .product-photo { width: 100%; box-shadow: 0 35px 80px #000; }
-    .order-card { padding: clamp(30px, 5vw, 58px); border: 1px solid var(--line); background: var(--panel); }
-    .price { margin: 28px 0; color: var(--gold-light); font-family: Georgia, "Times New Roman", serif; font-size: 2rem; }
-    .fine-print { margin: 22px 0 0; color: #85827a; font-size: 0.88rem; }
-    .listen { padding: 110px 0; border-top: 1px solid var(--line); background: linear-gradient(180deg, #10100e, #080808); text-align: center; }
-    .listen .lead { margin: 0 auto 42px; }
-    .platforms { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .platform { min-height: 118px; display: flex; align-items: center; justify-content: center; padding: 24px; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.02); color: #eae7df; font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease; }
-    .platform:hover { transform: translateY(-3px); border-color: var(--gold); color: var(--gold-light); }
-    .updates { padding: 100px 0; text-align: center; }
-    .updates .lead { margin: 0 auto 30px; }
-    footer { padding: 34px 0; border-top: 1px solid var(--line); color: #817f78; font-size: 0.85rem; }
-    .footer-wrap { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
-    .footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 20px; }
-    .footer-links a:hover { color: var(--gold-light); }
-    @media (max-width: 860px) {
-      .hero-grid, .album-grid, .order-grid { grid-template-columns: 1fr; }
-      .hero { min-height: auto; padding-top: 135px; }
-      .hero-copy { text-align: center; }
-      .hero .lead { margin-left: auto; margin-right: auto; }
-      .hero .actions { justify-content: center; }
-      .hero-art { width: min(520px, 88vw); margin: 10px auto 0; }
-      .album-intro { position: static; }
-      .platforms { grid-template-columns: repeat(2, 1fr); }
+    .skip-link { position: fixed; z-index: 100; top: 12px; left: 12px; padding: 10px 15px; background: var(--paper); color: var(--ink); transform: translateY(-160%); }
+    .skip-link:focus { transform: translateY(0); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+    h1 { margin-bottom: 20px; font-size: clamp(3.1rem, 8vw, 6.8rem); line-height: 0.95; letter-spacing: 0.08em; }
+    h2 { margin-bottom: 22px; font-size: clamp(2.7rem, 6vw, 5.2rem); line-height: 1; }
+    h3 { margin-bottom: 12px; font-size: 1.7rem; }
+    .eyebrow { margin-bottom: 15px; color: var(--gold-bright); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
+    .lead { color: #c7c3ba; font-size: clamp(1.05rem, 1.5vw, 1.2rem); }
+    .button-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      border: 1px solid var(--gold);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease;
     }
-    @media (max-width: 620px) {
-      .nav-wrap { min-height: 72px; }
-      .brand span { display: none; }
-      nav { gap: 15px; font-size: 0.82rem; }
-      nav a:nth-child(2) { display: none; }
-      .section { padding: 86px 0; }
-      h1 { font-size: clamp(4rem, 22vw, 6rem); }
-      .actions .button { width: 100%; }
-      .track-list li { grid-template-columns: 40px 1fr; padding: 12px 0; }
-      .track-detail { grid-column: 2; }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { background: var(--gold); color: var(--ink); }
+    .button.primary:hover { background: var(--gold-bright); border-color: var(--gold-bright); }
+    .button.secondary { border-color: #5b574f; color: var(--paper); }
+    .button.secondary:hover { border-color: var(--gold); color: var(--gold-bright); }
+    header { position: absolute; z-index: 10; top: 0; width: 100%; border-bottom: 1px solid var(--line); }
+    .nav-wrap { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .nav-brand { font-family: Georgia, "Times New Roman", serif; font-size: 1rem; letter-spacing: 0.15em; text-transform: uppercase; }
+    nav { display: flex; align-items: center; gap: 25px; color: #c8c4bb; font-size: 0.86rem; }
+    nav a:hover { color: var(--gold-bright); }
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 130px 0 90px;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(196, 161, 90, 0.14), transparent 32%),
+        linear-gradient(180deg, #0b0a08 0%, var(--ink) 100%);
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-inner { max-width: 890px; }
+    .hero-logo {
+      width: clamp(128px, 17vw, 190px);
+      aspect-ratio: 1;
+      margin: 0 auto 32px;
+      border: 1px solid rgba(226, 195, 121, 0.35);
+      border-radius: 50%;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.55);
+    }
+    .hero h1 { text-transform: uppercase; }
+    .hero-tagline { margin-bottom: 17px; color: var(--gold-bright); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.2rem, 2.5vw, 1.65rem); }
+    .hero .lead { max-width: 760px; margin: 0 auto 34px; }
+    .hero .button-row { justify-content: center; }
+    .feature { padding: clamp(90px, 11vw, 145px) 0; border-top: 1px solid var(--line); }
+    .poor-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; align-items: center; gap: clamp(50px, 9vw, 120px); }
+    .single-art {
+      aspect-ratio: 1;
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      border: 1px solid rgba(226, 195, 121, 0.35);
+      background: #f1f1ef;
+      box-shadow: 0 35px 90px rgba(0, 0, 0, 0.45);
+    }
+    .verse { margin: 30px 0; padding-left: 24px; border-left: 2px solid var(--gold); color: #ebe7de; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.35rem, 2.4vw, 1.9rem); line-height: 1.45; }
+    .verse cite { display: block; margin-top: 12px; color: var(--muted); font-family: Arial, Helvetica, sans-serif; font-size: 0.76rem; font-style: normal; letter-spacing: 0.12em; text-transform: uppercase; }
+    .poor-copy .lead { margin-bottom: 30px; }
+    .glory { background: var(--ink-soft); }
+    .glory-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(50px, 8vw, 105px); }
+    .album-visual { position: relative; padding: 0 12% 12% 0; }
+    .album-cover { width: 88%; box-shadow: 0 30px 75px rgba(0, 0, 0, 0.62); }
+    .cd-photo { position: absolute; right: 0; bottom: 0; width: 48%; border: 7px solid var(--ink-soft); box-shadow: 0 22px 55px rgba(0, 0, 0, 0.5); }
+    .glory-copy .lead { margin-bottom: 20px; }
+    .album-notes { margin: 0 0 28px; color: var(--muted); }
+    .price { margin: 28px 0 26px; color: var(--gold-bright); font-family: Georgia, "Times New Roman", serif; font-size: 1.8rem; }
+    .shipping-note { margin: 20px 0 0; color: #8f8b82; font-size: 0.86rem; }
+    .newsletter { padding: clamp(90px, 10vw, 125px) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--panel); text-align: center; }
+    .newsletter-inner { max-width: 750px; }
+    .newsletter .lead { margin: 0 auto 30px; }
+    .listen { padding: clamp(90px, 10vw, 125px) 0; }
+    .listen-head { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 42px; }
+    .listen-head h2 { margin-bottom: 0; }
+    .listen-head p { max-width: 410px; margin-bottom: 7px; color: var(--muted); }
+    .platforms { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .platform {
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 25px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.02);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+    .platform:hover { transform: translateY(-4px); border-color: var(--gold); background: rgba(196, 161, 90, 0.05); }
+    .platform-name { font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; }
+    .platform-action { color: var(--gold-bright); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    footer { padding: 32px 0; border-top: 1px solid var(--line); color: #88847b; font-size: 0.82rem; }
+    .footer-wrap { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 18px; }
+    .footer-links a:hover { color: var(--gold-bright); }
+    @media (max-width: 880px) {
+      .poor-grid, .glory-grid { grid-template-columns: 1fr; }
+      .single-art { width: min(580px, 100%); margin: 0 auto; }
+      .glory-grid { gap: 70px; }
+      .album-visual { width: min(620px, 100%); margin: 0 auto; }
+      .platforms { grid-template-columns: repeat(2, 1fr); }
+      .listen-head { display: block; }
+      .listen-head h2 { margin-bottom: 18px; }
+    }
+    @media (max-width: 640px) {
+      .nav-wrap { min-height: 70px; }
+      .nav-brand { font-size: 0.83rem; }
+      nav { gap: 15px; }
+      nav a:nth-child(2), nav a:nth-child(3) { display: none; }
+      .hero { min-height: auto; padding-top: 120px; }
+      .button-row .button { width: 100%; }
       .platforms { grid-template-columns: 1fr; }
-      .platform { min-height: 82px; }
+      .platform { min-height: 105px; }
       .footer-wrap { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
     }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <div class="container nav-wrap">
-      <a class="brand" href="#top"><img src="assets/shattered-kings-logo.jpg" alt="Shattered Kings logo"><span>Shattered Kings</span></a>
-      <nav aria-label="Main navigation"><a href="#glory">The Album</a><a href="#about">About</a><a href="#order">Order CD</a><a href="#listen">Listen</a></nav>
+      <a class="nav-brand" href="#top">Shattered Kings</a>
+      <nav aria-label="Main navigation">
+        <a href="#poor">Poor</a>
+        <a href="#glory">Glory</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#listen">Listen</a>
+      </nav>
     </div>
   </header>
-  <main>
+  <main id="main">
     <section class="hero" id="top">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="kicker">The album from Shattered Kings</p>
-          <h1>Glory</h1>
-          <p class="lead">Six tracks rooted in Scripture, confronting the weight of truth, wrath, mercy, love, sovereignty, and the hope found in Jesus Christ.</p>
-          <div class="actions"><a class="button primary" href="#listen">Listen to Glory</a><a class="button secondary" href="#order">Order the CD · $8 plus shipping</a></div>
-          <p class="hero-note">Available to stream worldwide. Physical CD manufactured on demand within a jewel case.</p>
+      <div class="container hero-inner">
+        <img class="hero-logo" src="assets/shattered-kings-logo.jpg" alt="Shattered Kings logo">
+        <h1>Shattered Kings</h1>
+        <p class="hero-tagline">Christian Americana music proclaiming the glory of God in Jesus Christ.</p>
+        <div class="button-row">
+          <a class="button primary" href="#poor">Hear the new single</a>
+          <a class="button secondary" href="#glory">Explore Glory</a>
         </div>
-        <div class="hero-art"><img src="assets/glory-cover.jpg" alt="Glory album cover by Shattered Kings"></div>
       </div>
     </section>
-    <section class="section" id="glory">
-      <div class="container album-grid">
-        <div class="album-intro"><p class="kicker">The tracklist</p><h2>A journey through the character of God.</h2><p>Five songs followed by a spoken reflection and prayer. Together, they point beyond themselves to who God is, who we are before Him, and the hope of the gospel.</p></div>
-        <ol class="track-list">
-          <li><span class="track-number">01</span><span class="track-title">Truth</span><span class="track-detail">Psalm 19</span></li>
-          <li><span class="track-number">02</span><span class="track-title">Wrath</span><span class="track-detail">Psalm 2</span></li>
-          <li><span class="track-number">03</span><span class="track-title">Mercy</span><span class="track-detail">Psalm 51</span></li>
-          <li><span class="track-number">04</span><span class="track-title">Love</span><span class="track-detail">Psalm 103</span></li>
-          <li><span class="track-number">05</span><span class="track-title">Sovereign</span><span class="track-detail">Psalm 145</span></li>
-          <li><span class="track-number">06</span><span class="track-title">Closing Words</span><span class="track-detail">Reflection and prayer</span></li>
-        </ol>
+    <section class="feature" id="poor">
+      <div class="container poor-grid">
+        <img class="single-art" src="assets/poor-cover.jpg" alt="Poor single cover by Shattered Kings">
+        <div class="poor-copy">
+          <p class="eyebrow">New single out now</p>
+          <h2>Poor</h2>
+          <blockquote class="verse">“Blessed are the poor in spirit, for theirs is the kingdom of heaven.”<cite>Matthew 5:3</cite></blockquote>
+          <p class="lead">“Poor” begins where pride ends. Based on Matthew 5:3, the song looks at spiritual poverty, our need for mercy, and the kingdom Jesus gives to those who come to Him empty handed.</p>
+          <div class="button-row">
+            <a class="button primary" href="https://open.spotify.com/artist/2xt7UtgRjKcIZBNnmaBjoP" target="_blank" rel="noopener">Listen on Spotify</a>
+            <a class="button secondary" href="https://youtube.com/@shatteredkingsmusic" target="_blank" rel="noopener">Listen on YouTube</a>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="mission" id="about"><div class="container"><p class="kicker">Why Shattered Kings</p><blockquote>“Christ is King. Every ruler, every nation, and every authority stands under Him.”</blockquote><p class="mission-copy">The name Shattered Kings comes from Psalm 110:5: “The Lord is at your right hand; he will shatter kings on the day of his wrath.”</p></div></section>
-    <section class="section" id="order">
-      <div class="container order-grid">
-        <img class="product-photo" src="assets/glory-cd.jpg" alt="Glory jewel-case CD and printed disc">
-        <div class="order-card"><p class="kicker">Physical edition</p><h2>Hold the music. Share the message.</h2><p class="lead">A six-track jewel-case CD, manufactured on demand and shipped directly to you.</p><p class="price">$8 plus shipping</p><a class="button primary" href="https://www.ebay.com/itm/128129387512" target="_blank" rel="noopener">Buy the CD on eBay</a><p class="fine-print">Shipping is $6.50 for the first CD and $1.50 for each additional CD. eBay processes payment and applicable sales tax. Kunaki manufactures and ships the CD.</p></div>
+    <section class="feature glory" id="glory">
+      <div class="container glory-grid">
+        <div class="album-visual">
+          <img class="album-cover" src="assets/glory-cover.jpg" alt="Glory album cover by Shattered Kings">
+          <img class="cd-photo" src="assets/glory-cd.jpg" alt="Glory jewel case CD and printed disc">
+        </div>
+        <div class="glory-copy">
+          <p class="eyebrow">The debut album</p>
+          <h2>Glory</h2>
+          <p class="lead">Glory is the six track debut album from Shattered Kings. Across “Truth,” “Wrath,” “Mercy,” “Love,” “Sovereign,” and “Closing Words,” the record moves through the character of God and the hope found in Jesus Christ.</p>
+          <p class="album-notes">The physical edition comes in a jewel case and is manufactured on demand by Kunaki, then shipped directly to you.</p>
+          <p class="price">$8 plus shipping</p>
+          <a class="button primary" href="https://www.ebay.com/itm/128129387512" target="_blank" rel="noopener">Buy Glory on eBay</a>
+          <p class="shipping-note">Shipping is $6.50 for the first CD and $1.50 for each additional CD. eBay processes payment and applicable sales tax.</p>
+        </div>
+      </div>
+    </section>
+    <section class="newsletter" id="newsletter">
+      <div class="container newsletter-inner">
+        <p class="eyebrow">Stay connected</p>
+        <h2>Hear what comes next.</h2>
+        <p class="lead">Join the Shattered Kings newsletter for new releases, videos, and occasional project updates. No noise, just an email when there is something worth sharing.</p>
+        <a class="button primary" href="https://buttondown.com/shatteredkings" target="_blank" rel="noopener">Sign up for the newsletter</a>
       </div>
     </section>
     <section class="listen" id="listen">
-      <div class="container"><p class="kicker">Listen now</p><h2>Hear Glory wherever you listen.</h2><p class="lead">Choose your preferred music service below.</p><div class="platforms"><a class="platform" href="https://open.spotify.com/artist/2xt7UtgRjKcIZBNnmaBjoP" target="_blank" rel="noopener">Spotify</a><a class="platform" href="https://music.apple.com/us/album/glory-ep/6807276902" target="_blank" rel="noopener">Apple Music</a><a class="platform" href="https://music.amazon.com/artists/B0GYZB2R7W?ref=dm_sh_ApMg39XgBU03FhaZQCw910aYN" target="_blank" rel="noopener">Amazon Music</a><a class="platform" href="https://youtube.com/@shatteredkingsmusic" target="_blank" rel="noopener">YouTube</a></div></div>
+      <div class="container">
+        <div class="listen-head">
+          <div><p class="eyebrow">Listen and follow</p><h2>Find Shattered Kings</h2></div>
+          <p>Hear the latest music, watch videos, and follow Shattered Kings on your preferred platform.</p>
+        </div>
+        <div class="platforms">
+          <a class="platform" href="https://youtube.com/@shatteredkingsmusic" target="_blank" rel="noopener"><span class="platform-name">YouTube</span><span class="platform-action">Watch and subscribe</span></a>
+          <a class="platform" href="https://open.spotify.com/artist/2xt7UtgRjKcIZBNnmaBjoP" target="_blank" rel="noopener"><span class="platform-name">Spotify</span><span class="platform-action">Listen and follow</span></a>
+          <a class="platform" href="https://music.apple.com/us/album/glory-ep/6807276902" target="_blank" rel="noopener"><span class="platform-name">Apple Music</span><span class="platform-action">Listen now</span></a>
+          <a class="platform" href="https://music.amazon.com/artists/B0GYZB2R7W?ref=dm_sh_ApMg39XgBU03FhaZQCw910aYN" target="_blank" rel="noopener"><span class="platform-name">Amazon Music</span><span class="platform-action">Listen now</span></a>
+        </div>
+      </div>
     </section>
-    <section class="updates" id="updates"><div class="container"><p class="kicker">Stay connected</p><h2>New music. Nothing extra.</h2><p class="lead">Join the Shattered Kings mailing list for new releases and occasional project updates.</p><a class="button secondary" href="https://buttondown.com/shatteredkings" target="_blank" rel="noopener">Join the mailing list</a></div></section>
   </main>
-  <footer><div class="container footer-wrap"><span>© 2026 Shattered Kings · Wheatland Publishing (ASCAP)</span><div class="footer-links"><a href="https://www.ebay.com/itm/128129387512" target="_blank" rel="noopener">Buy the CD</a><a href="https://open.spotify.com/artist/2xt7UtgRjKcIZBNnmaBjoP" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/album/glory-ep/6807276902" target="_blank" rel="noopener">Apple Music</a><a href="https://music.amazon.com/artists/B0GYZB2R7W?ref=dm_sh_ApMg39XgBU03FhaZQCw910aYN" target="_blank" rel="noopener">Amazon Music</a><a href="https://youtube.com/@shatteredkingsmusic" target="_blank" rel="noopener">YouTube</a></div></div></footer>
+  <footer>
+    <div class="container footer-wrap">
+      <span>© 2026 Shattered Kings · Wheatland Publishing (ASCAP)</span>
+      <div class="footer-links">
+        <a href="#poor">Poor</a>
+        <a href="https://www.ebay.com/itm/128129387512" target="_blank" rel="noopener">Buy Glory</a>
+        <a href="https://buttondown.com/shatteredkings" target="_blank" rel="noopener">Newsletter</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
